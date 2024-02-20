@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Julia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <header id="beranda">
+        <img src="./Gambar/logo.png" alt="Logo" class="logo">
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        
+    </header>
+    <main id="artikel">
+        <div id="konten">
+            <article>
+                <h1>Gerakan Menanam Pohon Kembali</h1>
+                <p>Mencintai Alam seperti mencintai diri sendiri</p>
+            </article>
+            <article>
+                <h2>Apa itu pohon?</h2>
+                <img src="./Gambar/pohon3.png" alt="Gambar Pohon" style="display: block; margin: 0 auto; max-width: 50%;">
+                <p style="text-align: justify;">
+                    Pohon adalah salah satu jenis tumbuhan tinggi yang memiliki batang kuat, cabang-cabang, dan daun-daun. Pohon biasanya tumbuh lebih besar dan lebih tinggi daripada tumbuhan lainnya, seperti semak atau rumput. Sifat khas pohon adalah memiliki batang utama yang disebut batang pohon, cabang-cabang yang bercabang dari batang utama, dan daun-daun yang terletak di cabang-cabangnya. Pohon juga memiliki sistem akar yang kuat yang menopang pertumbuhan mereka dan menyerap air dan nutrisi dari tanah.
+                </p>
+                <p id="paragraph2" style="text-align: justify; display: none;">
+                    Pohon memiliki peran yang sangat penting dalam ekosistem dan lingkungan. Mereka berfungsi sebagai produsen utama dalam rantai makanan karena mereka mampu melakukan fotosintesis, mengubah karbon dioksida menjadi oksigen dengan bantuan sinar matahari. Selain itu, pohon menyediakan tempat berlindung bagi banyak jenis hewan dan menyediakan berbagai produk kayu yang digunakan dalam berbagai industri, seperti konstruksi dan pembuatan furnitur.
+                </p>
+                <p id="paragraph3" style="text-align: justify; display: none;">
+                    Selain manfaat ekologis dan ekonomisnya, pohon juga memiliki nilai estetika yang tinggi dan sering digunakan dalam taman, hutan kota, dan lanskap sebagai elemen dekoratif dan peningkat keindahan alam. Pohon juga memiliki nilai budaya dan simbolisme dalam berbagai budaya di seluruh dunia.
+                </p>
+                <button id="readMoreButton" onclick="toggleParagraphVisibility()">Baca Selengkapnya</button>
+            </article>
+            
+            <article>
+                <h1>Mengapa penting menamam pohon?</h1>
+                <p style="text-align: justify;">
+                    Pohon merupakan sarana penghambat emisi yang sangat penting. Pohon memiliki kemampuan unik untuk menyerap karbon dioksida dari udara dan mengubahnya menjadi oksigen melalui proses fotosintesis. Melalui kontribusi ini, pohon membantu menjaga keseimbangan ozon di atmosfer, yang sangat penting untuk melindungi lingkungan kita dari perubahan iklim dan polusi udara. Dengan demikian, perlindungan dan pelestarian pohon menjadi suatu keharusan dalam upaya kita untuk menjaga keberlanjutan dan keseimbangan ekosistem bumi                
+                </p>
+            </article>
+        </div>
+        <div id="aside-container">
+            <aside>
+                <img src="./Gambar/logo2.png" alt="Foto Logo">
+                <p>Germok ialah inisiatif yang dicanangkan oleh Julia dengan tujuan mewujudkan lingkungan alam yang lebih subur, melalui penanaman ulang pohon di daerah-daerah yang gersang</p>
+            </aside>
+            <aside id="tentang">
+                <p>Tentang Penulis</p>
+                <img src="./Gambar/julia.jpeg" alt="Foto Anda" style="width:100%;">
+                <ul>
+                    <li>Nama: Ni Made Julia Budiantari</li>
+                    <li>Asal: Nusa Penida</li>
+                    <li>Hobby: Nonton Anime</li>
+                    <li>Moto: Lakukan yang bisa dilakukan</li>
+                </ul>
+            </aside>            
+        </div>
+    </main>
+    <footer id="kontak">
+        <p>Hak Cipta &copy; 2023 Julia Budiantari</p>
+        <div class="contact">
+            <a href="https://www.instagram.com/juliabudiantari" target="_blank">
+                <img src="./Gambar/instagram.png" alt="juliabudiantari"> 
+                <span>juliabudiantari</span>
+            </a>
+            <a href="mailto:juliafemale1208@gmail.com">
+                <img src="./Gambar/email.png" alt="juliafemale1208@gmail.com"> 
+                <span>juliafemale1208@gmail.com</span>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        let isParagraphVisible = false;
+
+        function toggleParagraphVisibility() {
+            const paragraph2 = document.getElementById("paragraph2");
+            const paragraph3 = document.getElementById("paragraph3");
+            const button = document.getElementById("readMoreButton");
+    
+            if (!isParagraphVisible) {
+                paragraph2.style.display = "block";
+                paragraph3.style.display = "block";
+                button.textContent = "Tutup";
+            } else {
+                paragraph2.style.display = "none";
+                paragraph3.style.display = "none";
+                button.textContent = "Baca Selengkapnya";
+            }
+    
+            isParagraphVisible = !isParagraphVisible;
+        }
+    </script>
+    
+</body>
+</html>
+

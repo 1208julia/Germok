@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS dasar untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS untuk header */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+header h1 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+header p {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/* CSS untuk logo */
+.logo {
+    width: 200px;
+}
+
+
+/* CSS untuk tombol hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* CSS untuk menu navigasi */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.nav-list li {
+    margin-right: 20px;
+    display: inline;
+    font-weight: bold; 
+}
+
+.nav-list li a {
+    text-decoration: none; 
+    color: rgb(28, 148, 28); 
+}
+
+.nav-list li a:hover {
+    text-decoration: underline; 
+}
+
+body {
+    background-color: white; 
+    min-height: 1000;
+}
+
+/* CSS untuk elemen main */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+
+
+article {
+    flex: 3;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+article p {
+    margin-bottom: 1px;
+}
+
+
+aside {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.884);
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    font-size: 14px; 
+    margin-right: 10px;
+}
+
+/* CSS elemen aside */
+aside p {
+    background-color: rgba(191, 186, 186, 0.559);
+    padding: 10px; 
+    text-align: center;
+
+}
+
+
+#konten {
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+#aside-container {
+    max-width: 300px; 
+    margin: 0 auto; 
+}
+
+#konten article {
+    margin-bottom: 20px; 
+}
+
+#aside-container aside {
+    margin-bottom: 20px; 
+}
+
+#konten article:first-child {
+    height: 350px;
+    background-color: rgba(100, 97, 97, 0.5);
+    background-image: url('pohon2.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    padding: 20px;
+}
+
+#konten article:first-child h1 {
+    font-size: 50px;
+    color: #fff;
+    padding: 10px; 
+    text-shadow: 4px 4px 10px rgb(0, 0, 0);
+}
+
+
+#konten article:first-child p {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #ffffff; 
+    padding: 10px;
+    text-shadow: 4px 4px 10px rgb(0, 0, 0); 
+}
+
+aside img {
+    max-width: 80%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+}
+
+article, aside {
+    margin-bottom: 200px; 
+}
+
+#readMoreButton {
+    background-color: #3bcd84;
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+#readMoreButton:hover {
+    background-color: #6cc52c;
+}
+
+/* CSS untuk footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.contact {
+    margin-top: 10px;
+}
+
+.contact a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.contact img {
+    width: 30px; 
+    height: 30px;
+    border: none;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px; 
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-list.active {
+        display: block; 
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        display: block;
+        text-align: center;
+    }
+}
+
